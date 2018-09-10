@@ -16,6 +16,15 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  void _openPage(context, String title) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (BuildContext context) => DetailPage(title)));
+  }
+
+  void _closePage(context) {
+    Navigator.pop(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,20 +56,38 @@ class HomePage extends StatelessWidget {
             ListTile(
               title: Text("Page 1"),
               trailing: Icon(Icons.arrow_forward),
+              onTap: () => _openPage(context, "Page 1 Detail"),
             ),
             ListTile(
               title: Text("Page 2"),
               trailing: Icon(Icons.arrow_forward),
+              onTap: () => _openPage(context, "Page 2 Detail"),
             ),
             ListTile(
               title: Text("close"),
               trailing: Icon(Icons.close),
-              onTap: () {
-                Navigator.pop(context);
-              },
+              onTap: () => _closePage(context),
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class DetailPage extends StatelessWidget {
+  final String title;
+
+  DetailPage(this.title);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Center(
+        child: Text(title),
       ),
     );
   }
