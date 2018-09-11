@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return MaterialApp(
       title: 'Flutter Tutorial',
-      theme: new ThemeData(
+      theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new TabbedPage(),
+      home: TabbedPage(),
     );
   }
 }
@@ -47,7 +47,7 @@ class _TabbedPageState extends State<TabbedPage>
           tabs: tabs,
         ),
       ),
-      body: new TabBarView(
+      body: TabBarView(
         controller: _tabController,
         children: tabs.map((Widget tab) {
           return Center(child: tab);

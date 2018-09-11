@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:listview_demo/pages/homepage.dart';
+import 'package:gridview_demo/pages/homepage.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,4 +15,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
