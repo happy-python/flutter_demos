@@ -1,8 +1,7 @@
 name: customswitch
 description: Beautiful Custom Switch created with Flutter.
 version: 0.0.1
-author: jack <1091354206@qq.com>
-homepage:
+homepage: https://github.com/happy-python/flutter_demos
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

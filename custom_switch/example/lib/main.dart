@@ -1,4 +1,4 @@
-import 'package:customswitch/custom_switch.dart';
+import 'package:customswitch/customswitch.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
